@@ -1,0 +1,86 @@
+{
+  "command_name": {
+    "fill": "채우기",
+    "fillhex": "지정채우기",
+    "canvas": "캔버스",
+    "help": "도움말"
+  },
+  "command_description": {
+    "fill": "좌표 하나를 색상으로 채웁니다.",
+    "fillhex": "좌표 하나를 원하는 색상으로 채웁니다.",
+    "canvas": "지금까지 만들어진 캔버스를 살펴봅니다.",
+    "help": "도움말을 살펴봅니다."
+  },
+  "command_options": {
+    "fill": {
+      "x": {
+        "name": "x",
+        "description": "X 좌표를 입력하세요."
+      },
+      "y": {
+        "name": "y",
+        "description": "Y 좌표를 입력하세요."
+      },
+      "color": {
+        "name": "색상",
+        "description": "색상을 선택하세요.",
+        "options": {
+          "marron":  "적갈색",
+        	"red":     "빨간색",
+	        "orange":  "주황색",
+	        "yellow":  "노랑색",
+	        "olive":   "올리브색",
+        	"purple":  "보라색",
+	        "fuchsia": "자홍색",
+	        "lime":    "라임색",
+	        "brown":   "갈색",
+	        "green":   "초록색",
+	        "navy":    "남색",
+	        "blue":    "파란색",
+	        "aqua":    "아쿠아",
+	        "teal":    "쇠오리색",
+	        "white":   "흰색",
+	        "black":   "검은색",
+	        "sliver":  "은색",
+	        "gray":    "회색"
+        }
+      },
+      "color_hex": {
+        "name": "색상",
+        "description": "16진수 색상을 입력하세요. #000000과 같은 형식이어야 합니다."
+      }
+    }
+  },
+  "fill": {
+    "complete": "좌표 ({{ .x }}, {{ .y }})에 `{{ .color }}`을 채웠어요.",
+    "timelimit": "다른 색상을 채우려면 **{{ .seconds }}초** 이후에 다시 시도해 주세요.",
+    "unknown_color": "색상을 `#000000`과 같은 형식으로 입력했는지 다시 한번 확인하세요."
+  },
+  "canvas": {
+    "title": "캔버스 ({{ .year }}년 {{ .month }}월)",
+    "dot": "현재 찍힌 점",
+    "users": "참여한 유저"
+  },
+  "help": {
+    "title": "도움말",
+    "description": "r/place가 Discord BOT으로 구현되었습니다.\n아래 명령어를 사용해서 캔버스를 채워보세요!",
+    "fill": {
+      "name": "🎨 채우기",
+      "value": "선택한 색상을 입력한 좌표에 채웁니다."
+    },
+    "fillhex": {
+      "name": "🎨 지정채우기",
+      "value": "직접 입력한 색상(`#000000` 형식)을 입력한 좌표에 채웁니다."
+    },
+    "canvas": {
+      "name": "🌌 캔버스",
+      "value": "지금까지 채워진 캔버스를 살펴봅니다."
+    },
+    "imageUrl": "https://media.discordapp.net/attachments/752320238997078130/963541780006043698/dotcanvas_ko.png?width=1379&height=460",
+    "button": {
+      "invite": "내 서버에 초대하기",
+      "github": "Github에서 보기",
+      "profile": "제작자 프로필 보기"
+    }
+  }
+}

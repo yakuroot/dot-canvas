@@ -1,0 +1,86 @@
+{
+  "command_name": {
+    "fill": "fill",
+    "fillhex": "fillhex",
+    "canvas": "canvas",
+    "help": "help"
+  },
+  "command_description": {
+    "fill": "Color a coordinate.",
+    "fillhex": "Fill one coordinate with the desired color.",
+    "canvas": "Check out the canvases that have been made so far.",
+    "help": "Explore the BOT's help."
+  },
+  "command_options": {
+    "fill": {
+      "x": {
+        "name": "x",
+        "description": "Input X Coordinates"
+      },
+      "y": {
+        "name": "y",
+        "description": "Input Y Coordinates"
+      },
+      "color": {
+        "name": "color",
+        "description": "Select a color",
+        "options": {
+          "marron":  "Marron",
+        	"red":     "Red",
+	        "orange":  "Orange",
+	        "yellow":  "Yellow",
+	        "olive":   "Olive",
+        	"purple":  "Purple",
+	        "fuchsia": "Fuchsia",
+	        "lime":    "Lime",
+	        "brown":   "Brown",
+	        "green":   "Green",
+	        "navy":    "Navy",
+	        "blue":    "Blue",
+	        "aqua":    "Aqua",
+	        "teal":    "Teal",
+	        "white":   "White",
+	        "black":   "Black",
+	        "sliver":  "Sliver",
+	        "gray":    "Gray"
+        }
+      },
+      "color_hex": {
+        "name": "color",
+        "description": "Please input a hexadecimal color. It must be of the same format as #000000"
+      }
+    }
+  },
+  "fill": {
+    "complete": "Fill coordinate ({{ .x }}, {{ .y }}) with color `{{ .color }}`.",
+    "timelimit": "Please try again After **{{ .seconds }}second(s)** to fill in another color.",
+    "unknown_color": "Please check again if the color is entered in the same format as `#000000`."
+  },
+  "canvas": {
+    "title": "CANVAS ({{ .year }}. {{ .month }}.)",
+    "dot": "Current Dots",
+    "users": "Participated Users"
+  },
+  "help": {
+    "title": "HELP",
+    "description": "r/place has been implemented as Discord BOT.\nFill in the canvas using the command below!",
+    "fill": {
+      "name": "🎨 Fill",
+      "value": "Populates the coordinates you entered with the selected color."
+    },
+    "fillhex": {
+      "name": "🎨 FillHex",
+      "value": "Fill the coordinates you entered with the color you entered(in the format `#000000`)."
+    },
+    "canvas": {
+      "name": "🌌 Canvas",
+      "value": "Check the canvas filled so far."
+    },
+    "imageUrl": "https://media.discordapp.net/attachments/752320238997078130/963541777632079912/dotcanvas_en.png?width=1379&height=460",
+    "button": {
+      "invite": "Invite BOT",
+      "github": "View from Github",
+      "profile": "View Creator Profile"
+    }
+  }
+}
