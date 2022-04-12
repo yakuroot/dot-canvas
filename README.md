@@ -18,7 +18,7 @@ You can check the canvas filled up to now through the `canvas` command.
 The canvas is initialized at midnight on the 1st of every month.
 * * *
 ## CANVAS
-![canvas]](https://dotcanvas.neoration.me/image)
+![canvas](https://dotcanvas.neoration.me/image)
 If the bot server is not working, it may not be visible.  
 * * *
 ## Getting Started
