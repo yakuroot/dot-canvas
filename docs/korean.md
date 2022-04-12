@@ -2,6 +2,8 @@
 # dot Canvas
 > Discord BOT으로 구현된 **r/place**  
 
+[여기](https://discord.com/api/oauth2/authorize?client_id=963240769861341224&permissions=414464724032&scope=bot%20applications.commands)를 클릭해서 봇을 초대할 수 있어요.  
+
 아래 언어를 통해서도 읽을 수 있습니다!  
 [English](../README.md) | **한국어**  
 * * *

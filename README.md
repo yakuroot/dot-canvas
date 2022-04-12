@@ -1,6 +1,8 @@
 ![Thumbnail](./images/dotcanvas_en.png)  
 # dot Canvas
-> **r/place** meterialized with a Discord BOT
+> **r/place** meterialized with a Discord BOT  
+
+You can invite the BOT [Here](https://discord.com/api/oauth2/authorize?client_id=963240769861341224&permissions=414464724032&scope=bot%20applications.commands).  
 
 You can also read it in the following languages:  
 **English** | [한국어](./docs/korean.md)  
