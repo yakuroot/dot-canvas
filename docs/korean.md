@@ -20,7 +20,7 @@
 캔버스는 매 달 1일 0시에 초기화됩니다.
 * * *
 ## 지금까지 완성된 캔버스
-![캔버스](https://dotcanvas.neoration.me/image)
+[여기](https://dotcanvas.neoration.me/image)를 클릭해서 볼 수 있어요.  
 봇 서버가 작동하지 않는 경우, 보이지 않을 수 있어요.  
 * * *
 ## 시작하기
@@ -35,6 +35,7 @@ CLIENT_ID=디스코드-봇-ID-입력
 MONGO_URI=MongoDB-연결URI-입력
 DATABASE_NAME=MongoDB-데이터베이스-이름-입력
 IMAGE_URL=캔버스-이미지URL-입력
+ERROR_LOG_CHANNEL=에러-로그-처리-채널ID-입력
 ```  
 
 ### 포트 확인하기

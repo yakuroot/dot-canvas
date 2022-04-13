@@ -1,6 +1,6 @@
 ![Thumbnail](./images/dotcanvas_en.png)  
 # dot Canvas
-> **r/place** meterialized with a Discord BOT  
+> **r/place** materialized with a Discord BOT  
 
 You can invite the BOT [Here](https://discord.com/api/oauth2/authorize?client_id=963240769861341224&permissions=414464724032&scope=bot%20applications.commands).  
 
@@ -20,7 +20,7 @@ You can check the canvas filled up to now through the `canvas` command.
 The canvas is initialized at midnight on the 1st of every month.
 * * *
 ## CANVAS
-![canvas](https://dotcanvas.neoration.me/image)
+You can [Click Here](https://dotcanvas.neoration.me/image) to see it.  
 If the bot server is not working, it may not be visible.  
 * * *
 ## Getting Started
@@ -35,6 +35,7 @@ CLIENT_ID=Write-Your-Discord-Bot-ID
 MONGO_URI=Write-Your-MongoDB-URI
 DATABASE_NAME=Write-Your-MongoDB-Database-Name
 IMAGE_URL=Write-Canvas-ImageURL
+ERROR_LOG_CHANNEL=Write-Your-Error-Log-Channel
 ```  
 
 ### To check the port
