@@ -34,3 +34,16 @@ func SaveNamedImage(fileName string) error {
 
 	return nil
 }
+
+func RemoveImage(fileName string) error {
+	path, err := os.Getwd()
+	if err != nil {
+		return err
+	}
+
+	if err := os.Remove(path + "/images/" + fileName + ".png"); err != nil {
+		return err
+	}
+
+	return nil
+}

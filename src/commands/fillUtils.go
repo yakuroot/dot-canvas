@@ -11,9 +11,17 @@ import (
 	"github.com/Neoration/dot-canvas/src/framework"
 	"github.com/Neoration/dot-canvas/src/locales"
 	"github.com/Neoration/dot-canvas/src/model"
+	"github.com/Neoration/dot-canvas/src/queue"
 	"github.com/diamondburned/arikawa/v3/discord"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo/options"
+)
+
+const coolDown = 15 // seconds
+
+var (
+	imageNameQueue  = queue.New[string](100)
+	canvasImageName = ""
 )
 
 func fillFilter(ctx *framework.Interaction) (pass bool) {
@@ -33,12 +41,19 @@ func fillFilter(ctx *framework.Interaction) (pass bool) {
 }
 
 func draw(x, y int, color string, executor discord.UserID) {
-	cache.UserContainer.Set(executor, time.Now().Add(1*time.Minute))
-	time.AfterFunc(1*time.Minute, func() { cache.UserContainer.Remove(executor) })
+	cache.UserContainer.Set(executor, time.Now().Add(coolDown*time.Second))
+	time.AfterFunc(coolDown*time.Second, func() { cache.UserContainer.Remove(executor) })
+
+	if imageNameQueue.Size() > 0 {
+		oldName := imageNameQueue.Pop()
+		canvas.RemoveImage(oldName)
+	}
 
 	canvas.SetDot(x, y, color)
 
-	go canvas.SaveImage()
+	fileName := base.GetRandCode()
+	canvas.SaveNamedImage(fileName)
+	imageNameQueue.Append(fileName)
 
 	go database.Canvas.UpdateOne(
 		context.Background(),
