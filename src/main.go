@@ -2,7 +2,11 @@ package main
 
 import (
 	"context"
+	cryptoRand "crypto/rand"
 	"log"
+	"math"
+	"math/big"
+	"math/rand"
 
 	"github.com/Neoration/dot-canvas/src/base"
 	"github.com/Neoration/dot-canvas/src/commands"
@@ -20,6 +24,11 @@ import (
 var (
 	ShardManager *shard.Manager
 )
+
+func init() {
+	seed, _ := cryptoRand.Int(cryptoRand.Reader, big.NewInt(math.MaxInt64))
+	rand.Seed(seed.Int64())
+}
 
 func init() {
 	newShard := state.NewShardFunc(func(m *shard.Manager, s *state.State) {
