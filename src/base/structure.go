@@ -86,7 +86,7 @@ func (s ChoiceStructure) SlashCommandOptionBuilder() discord.CommandOption {
 	for _, opt := range s.Choices {
 		nameLocalization := make(discord.StringLocales)
 		for _, lng := range locales.Languages {
-			nameLocalization[lng] = locales.Text(s.NameLocalizationKey, string(lng))
+			nameLocalization[lng] = locales.Text(opt.NameLocalizationKey, string(lng))
 		}
 
 		choices = append(choices, discord.StringChoice{
