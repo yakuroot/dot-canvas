@@ -3,7 +3,9 @@ package config
 import (
 	"log"
 	"os"
+	"strconv"
 
+	"github.com/diamondburned/arikawa/v3/discord"
 	"github.com/joho/godotenv"
 )
 
@@ -18,6 +20,7 @@ var (
 	MongoDBURI,
 	DatabaseName,
 	ImageURL string
+	ErrorLogChannel discord.ChannelID = 0
 )
 
 func init() {
@@ -37,6 +40,10 @@ func init() {
 	DatabaseName = os.Getenv("DATABASE_NAME")
 	ClientID = os.Getenv("CLIENT_ID")
 	ImageURL = os.Getenv("IMAGE_URL")
+
+	if i, err := strconv.ParseUint(os.Getenv("ERROR_LOG_CHANNEL"), 10, 64); err == nil {
+		ErrorLogChannel = discord.ChannelID(i)
+	}
 }
 
 func GetInviteURL() string {

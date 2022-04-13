@@ -1,13 +1,18 @@
 package base
 
 import (
+	"bytes"
 	"errors"
 	"fmt"
+	"runtime/debug"
+	"strings"
 
+	"github.com/Neoration/dot-canvas/src/config"
 	"github.com/Neoration/dot-canvas/src/framework"
 	"github.com/Neoration/dot-canvas/src/locales"
 	"github.com/diamondburned/arikawa/v3/api"
 	"github.com/diamondburned/arikawa/v3/discord"
+	"github.com/diamondburned/arikawa/v3/utils/sendpart"
 )
 
 type (
@@ -105,10 +110,23 @@ func (c *Command) RunCommand(ctx *framework.Interaction, args []string) {
 	}()
 
 	if e := <-err; e != nil {
-		errorHandler(ctx, e)
+		errorHandler(ctx, args, e)
 	}
 }
 
-func errorHandler(ctx *framework.Interaction, err error) {
+func errorHandler(ctx *framework.Interaction, args []string, err error) {
+	errString := "Error: \n" + err.Error() + "\n\nStack: \n" + string(debug.Stack())
+	reader := bytes.NewReader([]byte(errString))
 
+	ctx.State.SendMessageComplex(
+		config.ErrorLogChannel,
+		api.SendMessageData{
+			Content: fmt.Sprintf(
+				"Error Occured.\nAuthor: %s (%s)\nCommand: %s",
+				ctx.Author.Tag(),
+				ctx.Author.ID.String(),
+				strings.Join(args, " ")),
+			Files: []sendpart.File{{
+				Name:   "error.txt",
+				Reader: reader}}})
 }
