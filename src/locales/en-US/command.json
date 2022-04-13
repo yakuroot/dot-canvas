@@ -59,11 +59,13 @@
   "canvas": {
     "title": "CANVAS ({{ .year }}. {{ .month }}.)",
     "dot": "Current Dots",
-    "users": "Participated Users"
+    "users": "Participated Users",
+    "footer": "If the canvas hasn't been updated, you can check it out directly through the button below.",
+    "button": "View Canvas"
   },
   "help": {
     "title": "HELP",
-    "description": "r/place has been implemented as Discord BOT.\nFill in the canvas using the command below!",
+    "description": "r/place has been implemented through Discord BOT.\nFill in the canvas using the command below!",
     "fill": {
       "name": "🎨 Fill",
       "value": "Populates the coordinates you entered with the selected color."
