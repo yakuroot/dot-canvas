@@ -54,6 +54,7 @@ func draw(x, y int, color string, executor discord.UserID) {
 	fileName := base.GetRandCode()
 	canvas.SaveNamedImage(fileName)
 	imageNameQueue.Append(fileName)
+	canvasImageName = fileName
 
 	go database.Canvas.UpdateOne(
 		context.Background(),
