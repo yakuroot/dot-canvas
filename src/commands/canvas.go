@@ -28,7 +28,7 @@ func (canvasCommand) Run(ctx *framework.Interaction, _ []string) error {
 	ctx.Reply(framework.MessageOptions{
 		Embeds: []discord.Embed{{
 			Color: base.ColorCanvas,
-			Title: locales.Text("canvas.title", ctx.Language, map[string]interface{}{
+			Title: base.CanvasSign + " " + locales.Text("canvas.title", ctx.Language, map[string]interface{}{
 				"year":  time.Now().Year(),
 				"month": fmt.Sprintf("%02d", int(time.Now().Month()))}),
 			Fields: []discord.EmbedField{

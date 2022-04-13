@@ -15,7 +15,7 @@ func (helpCommand) Run(ctx *framework.Interaction, _ []string) error {
 		Embeds: []discord.Embed{{
 			Color:       base.ColorAqua,
 			Title:       base.AlertSign + " " + locales.Text("help.title", ctx.Language),
-			Description: base.AlertSign + " " + locales.Text("help.description", ctx.Language),
+			Description: locales.Text("help.description", ctx.Language),
 			Fields: []discord.EmbedField{
 				{
 					Name:   locales.Text("help.fill.name", ctx.Language),
