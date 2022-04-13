@@ -53,6 +53,8 @@ func draw(x, y int, color string, executor discord.UserID) {
 
 	fileName := base.GetRandCode()
 	canvas.SaveNamedImage(fileName)
+	canvas.SaveImage()
+
 	imageNameQueue.Append(fileName)
 	canvasImageName = fileName
 
